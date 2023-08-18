@@ -238,7 +238,7 @@ SEGMENT PROCEDURE ROLLER;   (* P010B01 *)
             WRITELN( 'ENTER [+,-] TO ALTER A SCORE,');
             WRITELN( '      [RET] TO GO TO NEXT SCORE,');
             WRITELN( '      [ESC] TO GO ON WHEN POINTS USED UP');
-            PTSLEFT := 7 + (RANDOM MOD 4);
+            PTSLEFT := 27 + (RANDOM MOD 4);
             WHILE (PTSLEFT < 20) AND ((RANDOM MOD 11) = 10) DO
               PTSLEFT := PTSLEFT + 10;
             SIXATTR2 := BASEATTR;
