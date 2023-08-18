@@ -22,7 +22,7 @@ SEGMENT PROCEDURE ROLLER;   (* P010B01 *)
         
         CHG2LST[ MAGE]    :=  SIXATTR2[ IQ] >= 11;
         
-        CHG2LST[ PRIEST]  := (SIXATTR2[ PIETY] >= 11);
+        CHG2LST[ PRIEST]  := SIXATTR2[ PIETY] >= 11;
                              
         CHG2LST[ THIEF]   := (SIXATTR2[ AGILITY] >= 11) AND
                              (CHARREC.ALIGN <> GOOD);
