@@ -22,30 +22,26 @@ SEGMENT PROCEDURE ROLLER;   (* P010B01 *)
         
         CHG2LST[ MAGE]    :=  SIXATTR2[ IQ] >= 11;
         
-        CHG2LST[ PRIEST]  := (SIXATTR2[ PIETY] >= 11)   AND
-                             (CHARREC.ALIGN <> NEUTRAL);
+        CHG2LST[ PRIEST]  := (SIXATTR2[ PIETY] >= 11);
                              
         CHG2LST[ THIEF]   := (SIXATTR2[ AGILITY] >= 11) AND
                              (CHARREC.ALIGN <> GOOD);
                              
         CHG2LST[ BISHOP]  := (SIXATTR2[ IQ] >= 12)      AND
-                             (SIXATTR2[ PIETY] >= 12)   AND
-                             (CHARREC.ALIGN <> NEUTRAL);
+                             (SIXATTR2[ PIETY] >= 12);
                             
         CHG2LST[ SAMURAI] := (SIXATTR2[ STRENGTH] >= 15) AND
                              (SIXATTR2[ IQ] >= 11)       AND
                              (SIXATTR2[ PIETY] >= 10)    AND
                              (SIXATTR2[ VITALITY] >= 14) AND
-                             (SIXATTR2[ AGILITY] >= 10)  AND
-                             (CHARREC.ALIGN <> EVIL);
+                             (SIXATTR2[ AGILITY] >= 10);
                             
         CHG2LST[ LORD]    := (SIXATTR2[ STRENGTH] >= 15) AND
                              (SIXATTR2[ IQ] >= 12)       AND
                              (SIXATTR2[ PIETY] >= 12)    AND
                              (SIXATTR2[ VITALITY] >= 15) AND
                              (SIXATTR2[ AGILITY] >= 14)  AND
-                             (SIXATTR2[ LUCK] >= 15)     AND
-                             (CHARREC.ALIGN = GOOD);
+                             (SIXATTR2[ LUCK] >= 15);
                              
         (* WC030 FROM 17 TO 15 *)
         CHG2LST[ NINJA]   := (SIXATTR2[ STRENGTH] >= 15) AND
@@ -53,8 +49,7 @@ SEGMENT PROCEDURE ROLLER;   (* P010B01 *)
                              (SIXATTR2[ PIETY] >= 15)    AND
                              (SIXATTR2[ VITALITY] >= 15) AND
                              (SIXATTR2[ AGILITY] >= 15)  AND
-                             (SIXATTR2[ LUCK] >= 15)     AND
-                             (CHARREC.ALIGN = EVIL);
+                             (SIXATTR2[ LUCK] >= 15);
                             
         GTCHGLST := CHG2LST[ FIGHTER] OR
                     CHG2LST[ MAGE]    OR
@@ -138,7 +133,7 @@ SEGMENT PROCEDURE ROLLER;   (* P010B01 *)
           FILLCHAR( CHARREC, SIZEOF( CHARREC), 0);
           CHARREC.NAME := CHARNAME;
           CHARREC.AGE := (18 * 52) + (RANDOM MOD 300);
-          CHARREC.GOLD.LOW := 90 + (RANDOM MOD 100);
+          CHARREC.GOLD.LOW := 490 + (RANDOM MOD 500);
           CHARREC.STATUS := OK;
           FOR LSI := 0 TO 4 DO
             BEGIN

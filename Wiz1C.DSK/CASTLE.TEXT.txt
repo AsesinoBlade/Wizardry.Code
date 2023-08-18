@@ -169,12 +169,7 @@
           ELSE
             IF CHARACTR[ PARTYCNT].INMAZE OR
                (CHARACTR[ PARTYCNT].LOSTXYL.LOCATION[ 3] <> 0) THEN
-              EXITADDP( '** OUT **')
-            ELSE
-              IF (PRTYALGN <> NEUTRAL) THEN
-                IF (CHARACTR[ PARTYCNT].ALIGN <> NEUTRAL) THEN
-                  IF (PRTYALGN <> CHARACTR[ PARTYCNT].ALIGN) THEN
-                    EXITADDP( '** BAD ALIGNMENT **');
+              EXITADDP( '** OUT **');
           CHARDISK[ PARTYCNT] := CHARI;
           CHARACTR[ PARTYCNT].INMAZE := TRUE;
           MOVELEFT( CHARACTR[ PARTYCNT],
