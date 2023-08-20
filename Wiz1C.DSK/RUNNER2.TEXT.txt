@@ -523,10 +523,10 @@
           
         BEGIN  (* SETTIME *)
           MVCURSOR( 1, 13);
-          PRINTSTR( 'NEW DELAY (1-5000) >');
+          PRINTSTR( 'NEW DELAY (1-50000) >');
           GETSTR( TIMESTR, 21, 13);
           TIMEVAL := 0;
-          IF LENGTH( TIMESTR) > 4 THEN
+          IF LENGTH( TIMESTR) > 5 THEN
             EXITTIME;
           FOR LLBASE04 := 1 TO LENGTH( TIMESTR) DO
             IF (TIMESTR[ LLBASE04] >= '0') AND
@@ -535,7 +535,7 @@
             ELSE
               EXITTIME;
           IF (TIMEVAL > 0) AND
-             (TIMEVAL <= 5000) THEN
+             (TIMEVAL <= 50000) THEN
                TIMEDLAY := TIMEVAL;
           EXITTIME
         END;  (* SETTIME *)
