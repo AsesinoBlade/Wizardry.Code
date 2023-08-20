@@ -333,10 +333,10 @@
                   IF (RANDOM MOD 4) <> 0 THEN
                     BEGIN
                       ATTRVAL := CHARACTR[ PARTYX].ATTRIB[ ATTRIBX];
-                      IF (RANDOM MOD 130) <
+                      IF (RANDOM MOD 1300) <
                          (CHARACTR[ PARTYX].AGE DIV 52) THEN
                         IF (ATTRVAL = 18) AND
-                           ((RANDOM MOD 6) <> 4) THEN
+                           ((RANDOM MOD 6) <> 7) THEN
                           (* NOTHING *)
                         ELSE
                           BEGIN
