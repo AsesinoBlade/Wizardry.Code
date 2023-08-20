@@ -485,7 +485,7 @@ SEGMENT PROCEDURE SWINGASW;  (* P010901 *)
       
         BEGIN
           PRINTSTR( 'FLEES!');
-          BATTLERC[ BATG].A.ENMYCNT := BATTLERC[ BATG].A.ENMYCNT - 1;
+          
           WITH BATTLERC[ BATG].A.TEMP04[ BATI] DO
             BEGIN
               STATUS := DEAD;
